@@ -35,20 +35,36 @@ body {
   background: var(--background);
   color: var(--text);
 
-  /*
-     Compact system sans-serif stack.
-     No external font download required.
-  */
   font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Helvetica,
-    Arial,
-    sans-serif;
+    Georgia,
+    "Times New Roman",
+    Times,
+    serif;
 
   font-size: 15px;
   line-height: 1.55;
+}
+
+
+/* =========================================
+   Force Georgia everywhere
+   ========================================= */
+
+body,
+.site-name,
+.site-nav,
+h1,
+h2,
+h3,
+p,
+a,
+div,
+span {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    Times,
+    serif;
 }
 
 
@@ -239,9 +255,7 @@ main > h1 {
 }
 
 
-/*
-   Add a subtle divider BETWEEN papers.
-*/
+/* Divider between papers */
 
 .paper + .paper {
   margin-top: 23px;
@@ -251,9 +265,7 @@ main > h1 {
 }
 
 
-/*
-   Compact title.
-*/
+/* Paper titles */
 
 .paper h3 {
   margin: 0 0 4px;
@@ -266,9 +278,7 @@ main > h1 {
 }
 
 
-/*
-   Linked working-paper/publication titles.
-*/
+/* Linked paper titles */
 
 .paper h3 a {
   color: var(--green);
@@ -285,9 +295,7 @@ main > h1 {
 }
 
 
-/*
-   Tight spacing inside each paper.
-*/
+/* Tight spacing inside each paper */
 
 .paper p {
   margin: 4px 0;
@@ -320,6 +328,7 @@ main > h1 {
 
 .abstract-content {
   width: 100%;
+  max-width: none;
 
   margin-top: 10px;
   margin-bottom: 10px;
