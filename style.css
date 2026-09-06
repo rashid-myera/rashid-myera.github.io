@@ -13,6 +13,7 @@
   --background: #ffffff;
 
   --rule: #e5e5e5;
+  --heading-rule: #cfcfcf;
   --paper-rule: #eeeeee;
 }
 
@@ -43,28 +44,6 @@ body {
 
   font-size: 15px;
   line-height: 1.55;
-}
-
-
-/* =========================================
-   Force Georgia everywhere
-   ========================================= */
-
-body,
-.site-name,
-.site-nav,
-h1,
-h2,
-h3,
-p,
-a,
-div,
-span {
-  font-family:
-    Georgia,
-    "Times New Roman",
-    Times,
-    serif;
 }
 
 
@@ -142,6 +121,7 @@ main a {
 
 main a:hover {
   color: var(--green-dark);
+
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -234,14 +214,35 @@ main > h1 {
 }
 
 
+/*
+   No full-width line immediately below
+   the main Research heading.
+*/
+
+.research-section.first-section {
+  padding-top: 0;
+  border-top: none;
+}
+
+
+/*
+   Short gray underline under section
+   heading text only.
+*/
+
 .research-section h2 {
+  display: inline-block;
+
   margin: 0 0 21px;
+  padding-bottom: 3px;
 
   color: var(--text);
 
   font-size: 18px;
   line-height: 1.35;
   font-weight: 600;
+
+  border-bottom: 1px solid var(--heading-rule);
 }
 
 
@@ -255,7 +256,9 @@ main > h1 {
 }
 
 
-/* Divider between papers */
+/*
+   Subtle divider between papers.
+*/
 
 .paper + .paper {
   margin-top: 23px;
@@ -265,7 +268,22 @@ main > h1 {
 }
 
 
-/* Paper titles */
+/*
+   No divider between papers in
+   Selected Works in Progress.
+*/
+
+.no-paper-dividers .paper + .paper {
+  margin-top: 18px;
+  padding-top: 0;
+
+  border-top: none;
+}
+
+
+/* =========================================
+   Paper titles
+   ========================================= */
 
 .paper h3 {
   margin: 0 0 4px;
@@ -277,8 +295,6 @@ main > h1 {
   font-weight: 600;
 }
 
-
-/* Linked paper titles */
 
 .paper h3 a {
   color: var(--green);
@@ -295,7 +311,9 @@ main > h1 {
 }
 
 
-/* Tight spacing inside each paper */
+/* =========================================
+   Tight spacing inside papers
+   ========================================= */
 
 .paper p {
   margin: 4px 0;
@@ -319,6 +337,29 @@ main > h1 {
 
   font-size: 13px;
   line-height: 1.55;
+}
+
+
+/* =========================================
+   Coauthor links
+   ========================================= */
+
+/*
+   Gray normally.
+   Green only when hovered.
+*/
+
+.coauthor {
+  color: var(--muted) !important;
+
+  text-decoration: none !important;
+}
+
+
+.coauthor:hover {
+  color: var(--green) !important;
+
+  text-decoration: none !important;
 }
 
 
