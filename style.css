@@ -63,7 +63,7 @@ body {
 
 .site-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 
   padding: 26px 0 17px;
@@ -88,9 +88,16 @@ body {
 }
 
 
+/*
+   Keeps navigation close to the name,
+   like the reference website.
+*/
+
 .site-nav {
   display: flex;
-  gap: 25px;
+  gap: 28px;
+
+  margin-left: 55px;
 }
 
 
@@ -214,10 +221,7 @@ main > h1 {
 }
 
 
-/*
-   No full-width line immediately below
-   the main Research heading.
-*/
+/* No line immediately after Research heading */
 
 .research-section.first-section {
   padding-top: 0;
@@ -225,10 +229,7 @@ main > h1 {
 }
 
 
-/*
-   Short gray underline under section
-   heading text only.
-*/
+/* Short gray underline under heading text */
 
 .research-section h2 {
   display: inline-block;
@@ -256,9 +257,7 @@ main > h1 {
 }
 
 
-/*
-   Subtle divider between papers.
-*/
+/* Divider between papers */
 
 .paper + .paper {
   margin-top: 23px;
@@ -268,10 +267,7 @@ main > h1 {
 }
 
 
-/*
-   No divider between papers in
-   Selected Works in Progress.
-*/
+/* No dividers within Works in Progress */
 
 .no-paper-dividers .paper + .paper {
   margin-top: 18px;
@@ -343,11 +339,6 @@ main > h1 {
 /* =========================================
    Coauthor links
    ========================================= */
-
-/*
-   Gray normally.
-   Green only when hovered.
-*/
 
 .coauthor {
   color: var(--muted) !important;
@@ -448,6 +439,12 @@ main > h1 {
   }
 
 
+  .site-nav {
+    margin-left: 35px;
+    gap: 20px;
+  }
+
+
   .home-layout {
     grid-template-columns: 1fr;
     gap: 26px;
@@ -483,7 +480,7 @@ main > h1 {
 
 
   .site-header {
-    align-items: flex-start;
+    align-items: center;
   }
 
 
@@ -493,7 +490,8 @@ main > h1 {
 
 
   .site-nav {
-    gap: 17px;
+    margin-left: 25px;
+    gap: 15px;
   }
 
 
