@@ -284,6 +284,13 @@ main a:hover {
 }
 
 
+.coming-soon {
+  margin-top: 4px;
+  color: #888888;
+  font-style: italic;
+}
+
+
 /* Very small screens */
 
 @media (max-width: 460px) {
