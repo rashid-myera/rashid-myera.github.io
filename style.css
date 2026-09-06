@@ -296,6 +296,10 @@ h3 {
   color: var(--green);
 }
 
+.green-title {
+  color: var(--green);
+}
+
 
 .jmp-tag {
   margin-left: 6px;
