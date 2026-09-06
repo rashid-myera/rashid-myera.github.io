@@ -222,13 +222,12 @@ section {
 h2 {
   margin: 0 0 28px;
 
-  color: var(--green);
+  color: var(--text);
 
   font-size: 27px;
   line-height: 1.3;
-  font-weight: 600;
+  font-weight: 700;
 }
-
 
 h3 {
   font-size: 20px;
