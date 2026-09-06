@@ -269,7 +269,6 @@ h3 {
   color: var(--muted);
 }
 
-
 /* =========================================
    Clickable paper titles
    ========================================= */
@@ -336,88 +335,23 @@ h3 {
    Abstract expandable button
    ========================================= */
 
-.abstract-box {
-  margin-top: 11px;
-}
-
-
-.abstract-box summary {
-  list-style: none;
-}
-
-
-.abstract-box summary::-webkit-details-marker {
-  display: none;
-}
-
-
-.abstract-button {
-  display: inline-flex;
-
-  align-items: center;
-  gap: 8px;
-
-  padding: 5px 11px 5px 7px;
-
-  color: var(--green);
-
-  font-size: 15px;
-  font-weight: 600;
-
-  cursor: pointer;
-
-  border: 1px solid var(--green);
-  border-radius: 5px;
-
-  user-select: none;
-}
-
-
-.abstract-button:hover {
-  background: rgba(47, 93, 80, 0.06);
-}
-
-
-.abstract-icon {
-  display: inline-flex;
-
-  align-items: center;
-  justify-content: center;
-
-  width: 22px;
-  height: 22px;
-
-  border: 1px solid var(--green);
-  border-radius: 3px;
-
-  font-size: 18px;
-  line-height: 1;
-}
-
-
-.abstract-icon::before {
-  content: "+";
-}
-
-
-.abstract-box[open] .abstract-icon::before {
-  content: "−";
-}
-
-
 .abstract-content {
-  max-width: 850px;
+  width: 100%;
+  max-width: none;
+
   margin-top: 14px;
   margin-bottom: 14px;
-  color: var(--text);
+
+  color: var(--muted);
+
+  font-size: 15px;
   line-height: 1.6;
 }
 
-.abstract-placeholder {
-  color: var(--light-muted);
-  font-style: italic;
+.paper-detail {
+  font-size: 15px;
+  line-height: 1.55;
 }
-
 
 /* =========================================
    Mobile
