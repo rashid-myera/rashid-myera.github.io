@@ -54,23 +54,6 @@ body {
 }
 
 
-/* =========================================
-   Source Sans 3 headings
-   ========================================= */
-
-.site-name,
-.site-nav,
-.intro-text h1,
-h1,
-h2,
-h3,
-.abstract-button {
-  font-family:
-    "Source Sans 3",
-    Arial,
-    sans-serif;
-}
-
 
 /* =========================================
    Header / Navigation
