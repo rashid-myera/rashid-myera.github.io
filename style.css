@@ -553,8 +553,8 @@ main > h1 {
 
   color: var(--text);
 
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.4;
 }
 
 
@@ -781,5 +781,9 @@ main > h1 {
   .front-paper-title {
     font-size: 14px;
   }
+
+   .paper-status {
+  font-size: 15px;
+}
 
 }
