@@ -3,8 +3,10 @@
    ========================================= */
 
 :root {
-  --green: #2f5d50;
-  --green-dark: #21483d;
+
+  /* Brighter green */
+  --green: #2f8f63;
+  --green-dark: #236f4c;
 
   --text: #292929;
   --muted: #707070;
@@ -19,7 +21,7 @@
 
 
 /* =========================================
-   Basic reset
+   BASIC RESET
    ========================================= */
 
 * {
@@ -48,7 +50,78 @@ body {
 
 
 /* =========================================
-   Main page
+   MANUAL TEXT CLASSES
+   ========================================= */
+
+/* Green text */
+.green-text {
+  color: var(--green);
+}
+
+
+/* Gray text */
+.gray-text {
+  color: var(--muted);
+}
+
+
+/* Lighter gray text */
+.light-gray-text {
+  color: var(--light-muted);
+}
+
+
+/* Italic text */
+.italic-text {
+  font-style: italic;
+}
+
+
+/* Bold text */
+.bold-text {
+  font-weight: 700;
+}
+
+
+/* Smaller text */
+.small-text {
+  font-size: 13px;
+}
+
+
+/* Put something on a new line */
+.new-line {
+  display: block;
+}
+
+
+/* =========================================
+   LINKS
+   ========================================= */
+
+/*
+   By default, all links are underlined.
+*/
+
+a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+
+main a {
+  color: var(--green);
+}
+
+
+main a:hover {
+  color: var(--green-dark);
+}
+
+
+/* =========================================
+   MAIN PAGE WIDTH
    ========================================= */
 
 .page {
@@ -58,7 +131,7 @@ body {
 
 
 /* =========================================
-   Header / Navigation
+   HEADER / NAVIGATION
    ========================================= */
 
 .site-header {
@@ -66,76 +139,51 @@ body {
   justify-content: flex-start;
   align-items: center;
 
-  padding: 26px 0 17px;
+  padding: 28px 0 19px;
   margin-bottom: 38px;
 
   border-bottom: 1px solid var(--rule);
 }
 
 
+/* Larger name */
+
 .site-name {
   color: var(--green);
 
-  font-size: 16px;
-  font-weight: 600;
-
-  text-decoration: none;
+  font-size: 22px;
+  font-weight: 700;
 }
 
 
-.site-name:hover {
-  color: var(--green-dark);
-}
-
-
-/*
-   Keeps navigation close to the name,
-   like the reference website.
-*/
+/* Research and CV sit near name */
 
 .site-nav {
   display: flex;
-  gap: 28px;
 
+  gap: 31px;
   margin-left: 55px;
 }
 
 
+/* Larger Research / CV */
+
 .site-nav a {
   color: var(--text);
 
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
-
-  text-decoration: none;
 }
 
 
+.site-name:hover,
 .site-nav a:hover {
-  color: var(--green);
-}
-
-
-/* =========================================
-   General links
-   ========================================= */
-
-main a {
-  color: var(--green);
-  text-decoration: none;
-}
-
-
-main a:hover {
   color: var(--green-dark);
-
-  text-decoration: underline;
-  text-underline-offset: 2px;
 }
 
 
 /* =========================================
-   Homepage
+   HOMEPAGE INTRODUCTION
    ========================================= */
 
 .home-layout {
@@ -166,24 +214,163 @@ main a:hover {
 }
 
 
-.home-text h1 {
-  margin: 0 0 16px;
-
-  color: var(--text);
-
-  font-size: 20px;
-  line-height: 1.3;
-  font-weight: 600;
-}
-
-
 .home-text p {
   margin: 0 0 14px;
 }
 
 
 /* =========================================
-   Main content
+   HOMEPAGE RESEARCH PAPERS
+   ========================================= */
+
+/*
+   Creates the horizontal line and space
+   between your introduction and Research Papers.
+*/
+
+.front-papers {
+  margin-top: 46px;
+  padding-top: 28px;
+
+  border-top: 1px solid var(--rule);
+}
+
+
+/* Research Papers heading */
+
+.front-papers h2 {
+  display: inline-block;
+
+  margin: 0 0 22px;
+  padding-bottom: 3px;
+
+  color: var(--text);
+
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 600;
+
+  border-bottom: 1px solid var(--heading-rule);
+}
+
+
+/* Individual homepage papers */
+
+.front-paper {
+  margin: 0;
+  padding: 0;
+}
+
+
+.front-paper + .front-paper {
+  margin-top: 18px;
+}
+
+
+/* Homepage paper titles */
+
+.front-paper-title {
+  margin: 0 0 2px;
+
+  color: var(--text);
+
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+
+/*
+   Keep homepage paper titles on one line
+   on regular desktop screens.
+*/
+
+@media (min-width: 701px) {
+
+  .front-paper-title {
+    white-space: nowrap;
+  }
+
+}
+
+
+/*
+   Homepage paper-title links look like
+   ordinary black text until you hover.
+*/
+
+.front-paper-title a {
+  color: var(--text);
+
+  text-decoration: none;
+}
+
+
+.front-paper-title a:hover {
+  color: var(--green);
+
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+
+/*
+   Black information immediately below
+   homepage paper titles.
+*/
+
+.front-paper-info {
+  margin: 2px 0;
+
+  color: var(--text);
+
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+
+/*
+   Homepage coauthor lines.
+*/
+
+.front-paper-authors {
+  margin: 2px 0;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+
+/*
+   JMP Draft Coming Soon on separate line.
+*/
+
+.front-paper-coming-soon {
+  margin: 1px 0 0;
+
+  color: var(--light-muted);
+
+  font-size: 13px;
+  font-style: italic;
+}
+
+
+/*
+   Draft Coming Soon inside parentheses,
+   e.g. Immigrant Advantage.
+*/
+
+.front-inline-coming-soon {
+  color: var(--light-muted);
+
+  font-style: italic;
+}
+
+
+/* =========================================
+   MAIN CONTENT
    ========================================= */
 
 main {
@@ -192,7 +379,7 @@ main {
 
 
 /* =========================================
-   Research title
+   RESEARCH PAGE TITLE
    ========================================= */
 
 main > h1 {
@@ -209,7 +396,7 @@ main > h1 {
 
 
 /* =========================================
-   Research sections
+   RESEARCH SECTIONS
    ========================================= */
 
 .research-section {
@@ -221,15 +408,23 @@ main > h1 {
 }
 
 
-/* No line immediately after Research heading */
+/*
+   No horizontal line directly below
+   the main Research heading.
+*/
 
 .research-section.first-section {
   padding-top: 0;
+
   border-top: none;
 }
 
 
-/* Short gray underline under heading text */
+/*
+   Working Papers / Publications /
+   Selected Works in Progress /
+   Published Dataset
+*/
 
 .research-section h2 {
   display: inline-block;
@@ -248,7 +443,7 @@ main > h1 {
 
 
 /* =========================================
-   Individual papers
+   INDIVIDUAL RESEARCH PAPERS
    ========================================= */
 
 .paper {
@@ -257,7 +452,9 @@ main > h1 {
 }
 
 
-/* Divider between papers */
+/*
+   Faint divider between papers.
+*/
 
 .paper + .paper {
   margin-top: 23px;
@@ -267,7 +464,10 @@ main > h1 {
 }
 
 
-/* No dividers within Works in Progress */
+/*
+   No divider between papers in
+   Selected Works in Progress.
+*/
 
 .no-paper-dividers .paper + .paper {
   margin-top: 18px;
@@ -278,7 +478,7 @@ main > h1 {
 
 
 /* =========================================
-   Paper titles
+   RESEARCH PAPER TITLES
    ========================================= */
 
 .paper h3 {
@@ -292,23 +492,23 @@ main > h1 {
 }
 
 
+/*
+   Linked paper titles on Research page
+   are green and underlined.
+*/
+
 .paper h3 a {
   color: var(--green);
-
-  text-decoration: none;
 }
 
 
 .paper h3 a:hover {
   color: var(--green-dark);
-
-  text-decoration: underline;
-  text-underline-offset: 2px;
 }
 
 
 /* =========================================
-   Tight spacing inside papers
+   SPACING WITHIN PAPERS
    ========================================= */
 
 .paper p {
@@ -317,7 +517,7 @@ main > h1 {
 
 
 /* =========================================
-   Paper metadata
+   PAPER METADATA
    ========================================= */
 
 .paper-meta {
@@ -328,6 +528,10 @@ main > h1 {
 }
 
 
+/*
+   Abstract / Presentations / Featured in.
+*/
+
 .paper-detail {
   color: var(--muted);
 
@@ -337,25 +541,56 @@ main > h1 {
 
 
 /* =========================================
-   Coauthor links
+   REVISE & RESUBMIT / PUBLICATION STATUS
    ========================================= */
+
+/*
+   Black and same size as Draft links.
+*/
+
+.paper-status {
+  margin: 3px 0;
+
+  color: var(--text);
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   DRAFT / NBER / CEPR / PUBLISHED LINKS
+   ========================================= */
+
+.paper-links {
+  margin: 4px 0;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   COAUTHOR LINKS
+   ========================================= */
+
+/*
+   Coauthors are gray and underlined normally.
+   They turn green when hovered.
+*/
 
 .coauthor {
   color: var(--muted) !important;
-
-  text-decoration: none !important;
 }
 
 
 .coauthor:hover {
   color: var(--green) !important;
-
-  text-decoration: none !important;
 }
 
 
 /* =========================================
-   Abstracts
+   ABSTRACTS
    ========================================= */
 
 .abstract-content {
@@ -373,29 +608,36 @@ main > h1 {
 
 
 /* =========================================
-   Job Market Paper
+   JOB MARKET PAPER
    ========================================= */
 
 .jmp-title {
   color: var(--green) !important;
 }
 
+
 .jmp-status {
-  margin: 4px 0;
+  margin: 4px 0 0;
 }
 
+
+/*
+   "Job Market Paper;"
+*/
+
 .jmp-label {
+  display: block;
+
   color: var(--text);
+
   font-size: 13px;
   font-style: normal;
   font-weight: 600;
-
-  margin-right: 10px;
 }
 
 
 /* =========================================
-   Other green titles
+   OTHER GREEN TITLES
    ========================================= */
 
 .green-title {
@@ -404,7 +646,7 @@ main > h1 {
 
 
 /* =========================================
-   Journals
+   JOURNALS
    ========================================= */
 
 .journal {
@@ -414,10 +656,14 @@ main > h1 {
 
 
 /* =========================================
-   Draft Coming Soon
+   DRAFT COMING SOON
    ========================================= */
 
 .coming-soon {
+  display: block;
+
+  margin: 1px 0 0;
+
   color: var(--light-muted);
 
   font-size: 13px;
@@ -426,7 +672,21 @@ main > h1 {
 
 
 /* =========================================
-   Mobile
+   DATASET PRIZE
+   ========================================= */
+
+.dataset-prize {
+  margin: 4px 0 0;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   MOBILE
    ========================================= */
 
 @media (max-width: 700px) {
@@ -468,11 +728,21 @@ main > h1 {
     font-size: 21px;
   }
 
+
+  /*
+     Allow long homepage paper titles
+     to wrap on phones/tablets.
+  */
+
+  .front-paper-title {
+    white-space: normal;
+  }
+
 }
 
 
 /* =========================================
-   Small screens
+   SMALL SCREENS
    ========================================= */
 
 @media (max-width: 460px) {
@@ -482,24 +752,19 @@ main > h1 {
   }
 
 
-  .site-header {
-    align-items: center;
-  }
-
-
   .site-name {
-    font-size: 15px;
+    font-size: 18px;
   }
 
 
   .site-nav {
-    margin-left: 25px;
+    margin-left: 24px;
     gap: 15px;
   }
 
 
   .site-nav a {
-    font-size: 13px;
+    font-size: 15px;
   }
 
 
@@ -510,6 +775,11 @@ main > h1 {
 
   .research-section h2 {
     font-size: 17px;
+  }
+
+
+  .front-paper-title {
+    font-size: 14px;
   }
 
 }
