@@ -380,14 +380,17 @@ main > h1 {
   color: var(--green) !important;
 }
 
+.jmp-status {
+  margin: 4px 0;
+}
 
-.jmp-tag {
-  margin-left: 4px;
-
+.jmp-label {
   color: var(--text);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
 
-  font-size: 0.9em;
-  font-weight: 500;
+  margin-right: 10px;
 }
 
 
