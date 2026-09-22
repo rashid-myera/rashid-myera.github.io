@@ -787,3 +787,102 @@ main > h1 {
 }
 
 }
+
+
+
+/* =========================================
+   TEACHING PAGE
+   ========================================= */
+
+.teaching-page {
+  padding-bottom: 65px;
+}
+
+
+/* Main Teaching title */
+
+.teaching-page > h1 {
+  margin: 0 0 31px;
+
+  color: var(--text);
+
+  text-align: center;
+
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+
+/* Teaching sections */
+
+.teaching-section {
+  margin-bottom: 30px;
+}
+
+
+/* Bold + underlined section headings */
+
+.teaching-heading {
+  margin: 0 0 14px;
+
+  color: var(--text);
+
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 700;
+
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+
+/* Paragraph spacing */
+
+.teaching-section p {
+  margin: 7px 0;
+
+  color: var(--text);
+
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+
+/* Teaching links */
+
+.teaching-section a {
+  color: var(--green);
+
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+
+.teaching-section a:hover {
+  color: var(--green-dark);
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .teaching-page > h1 {
+    font-size: 21px;
+  }
+
+}
+
+
+@media (max-width: 460px) {
+
+  .teaching-heading {
+    font-size: 15px;
+  }
+
+  .teaching-section p {
+    font-size: 14px;
+  }
+
+}
