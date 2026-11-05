@@ -886,3 +886,13 @@ main > h1 {
   }
 
 }
+
+.award-link {
+  color: var(--green) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 2px;
+}
+
+.award-link:hover {
+  color: var(--green-dark) !important;
+}
